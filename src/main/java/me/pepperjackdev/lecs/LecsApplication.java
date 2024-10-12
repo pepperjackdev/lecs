@@ -9,7 +9,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan("me.pepperjackdev.lecs.model")
 @SpringBootApplication
 public class LecsApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(LecsApplication.class, args);
 	}
