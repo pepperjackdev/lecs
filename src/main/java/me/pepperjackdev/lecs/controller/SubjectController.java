@@ -17,8 +17,6 @@ import me.pepperjackdev.lecs.model.Subject;
 import me.pepperjackdev.lecs.repository.SubjectRepository;
 import org.springframework.web.bind.annotation.PutMapping;
 
-
-
 @RestController
 @RequestMapping("/api/subjects")
 public class SubjectController {
