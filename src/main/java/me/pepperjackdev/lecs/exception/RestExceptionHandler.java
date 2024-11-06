@@ -5,6 +5,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
@@ -12,9 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import me.pepperjackdev.lecs.exception.subject.SubjectMismatchException;
 import me.pepperjackdev.lecs.exception.subject.SubjectNotFoundException;
 
-// FIXME: Exception handler system is not returning to clients an error message
-
-// @ControllerAdvice
+@ControllerAdvice
 public class RestExceptionHandler 
     extends ResponseEntityExceptionHandler {
     
