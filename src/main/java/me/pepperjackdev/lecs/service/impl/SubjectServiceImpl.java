@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import me.pepperjackdev.lecs.exception.subject.SubjectMismatchException;
 import me.pepperjackdev.lecs.exception.subject.SubjectNotFoundException;
+import me.pepperjackdev.lecs.exception.subject.SubjectTitleAlreadyTakenException;
 import me.pepperjackdev.lecs.model.Subject;
 import me.pepperjackdev.lecs.repository.SubjectRepository;
 import me.pepperjackdev.lecs.service.SubjectService;
@@ -18,6 +19,10 @@ public class SubjectServiceImpl
 
     @Override
     public Subject createSubject(Subject subject) {
+        if (subjectRepository.getSubjectBySubjectTitle(subject.getTitle()).isPresent()) {
+            throw new SubjectTitleAlreadyTakenException();
+        }
+
         return subjectRepository.save(subject);
     }
 

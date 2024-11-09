@@ -7,13 +7,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
 @ToString(onlyExplicitlyIncluded = true)
+@NoArgsConstructor
 @AllArgsConstructor
 public class Subject {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Getter
