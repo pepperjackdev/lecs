@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import me.pepperjackdev.lecs.exception.subject.SubjectMismatchException;
 import me.pepperjackdev.lecs.exception.subject.SubjectNotFoundException;
+import me.pepperjackdev.lecs.exception.subject.SubjectTitleAlreadyTakenException;
 
 @ControllerAdvice
 public class RestExceptionHandler 
@@ -20,6 +21,11 @@ public class RestExceptionHandler
     @ExceptionHandler({ SubjectNotFoundException.class })
     protected ResponseEntity<Object> handleNotFound(Exception e, WebRequest request) {
         return handleExceptionInternal(e, "Book not found", new HttpHeaders(), HttpStatus.NOT_FOUND, request);
+    }
+
+    @ExceptionHandler({ SubjectTitleAlreadyTakenException.class })
+    protected ResponseEntity<Object> handleTitleAlreadyTaken(Exception e, WebRequest request) {
+        return handleExceptionInternal(e, "Title already taken", new HttpHeaders(), HttpStatus.CONFLICT, request);
     }
 
     @ExceptionHandler({ 

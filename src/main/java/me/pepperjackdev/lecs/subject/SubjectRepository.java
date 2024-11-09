@@ -1,11 +1,9 @@
-package me.pepperjackdev.lecs.repository;
+package me.pepperjackdev.lecs.subject;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-import me.pepperjackdev.lecs.model.Subject;
 
 // FIXME: Fix "SQL Feature Not Supported" error
 

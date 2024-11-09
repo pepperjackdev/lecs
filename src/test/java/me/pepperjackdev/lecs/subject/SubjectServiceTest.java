@@ -1,4 +1,4 @@
-package me.pepperjackdev.lecs.service;
+package me.pepperjackdev.lecs.subject;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
@@ -22,9 +22,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import me.pepperjackdev.lecs.exception.subject.SubjectMismatchException;
 import me.pepperjackdev.lecs.exception.subject.SubjectNotFoundException;
 import me.pepperjackdev.lecs.exception.subject.SubjectTitleAlreadyTakenException;
-import me.pepperjackdev.lecs.model.Subject;
-import me.pepperjackdev.lecs.repository.SubjectRepository;
-import me.pepperjackdev.lecs.service.impl.SubjectServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
 public class SubjectServiceTest {

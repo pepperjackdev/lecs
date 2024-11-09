@@ -1,4 +1,4 @@
-package me.pepperjackdev.lecs.controller;
+package me.pepperjackdev.lecs.subject;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
-import me.pepperjackdev.lecs.model.Subject;
-import me.pepperjackdev.lecs.service.SubjectService;
 
 @RestController
 @RequestMapping("/api/subjects")

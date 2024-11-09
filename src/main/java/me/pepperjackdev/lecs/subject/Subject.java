@@ -1,4 +1,4 @@
-package me.pepperjackdev.lecs.model;
+package me.pepperjackdev.lecs.subject;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

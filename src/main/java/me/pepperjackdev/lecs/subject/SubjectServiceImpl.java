@@ -1,4 +1,4 @@
-package me.pepperjackdev.lecs.service.impl;
+package me.pepperjackdev.lecs.subject;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -6,9 +6,6 @@ import org.springframework.stereotype.Service;
 import me.pepperjackdev.lecs.exception.subject.SubjectMismatchException;
 import me.pepperjackdev.lecs.exception.subject.SubjectNotFoundException;
 import me.pepperjackdev.lecs.exception.subject.SubjectTitleAlreadyTakenException;
-import me.pepperjackdev.lecs.model.Subject;
-import me.pepperjackdev.lecs.repository.SubjectRepository;
-import me.pepperjackdev.lecs.service.SubjectService;
 
 @Service
 public class SubjectServiceImpl

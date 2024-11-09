@@ -1,6 +1,4 @@
-package me.pepperjackdev.lecs.service;
-
-import me.pepperjackdev.lecs.model.Subject;
+package me.pepperjackdev.lecs.subject;
 
 public interface SubjectService {
     public Subject createSubject(Subject subject);
