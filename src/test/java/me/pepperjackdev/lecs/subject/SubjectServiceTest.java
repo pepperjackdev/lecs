@@ -52,12 +52,12 @@ public class SubjectServiceTest {
         Subject subject = new Subject(1L, "Test Subject");
 
         // when...then
-        when(subjectRepository.getSubjectBySubjectTitle("Test Subject")).thenReturn(Optional.of(subject));
+        when(subjectRepository.findByTitle("Test Subject")).thenReturn(Optional.of(subject));
         assertThrows(SubjectTitleAlreadyTakenException.class, () -> {
             subjectService.createSubject(subject);
         });
 
-        verify(subjectRepository).getSubjectBySubjectTitle("Test Subject");
+        verify(subjectRepository).findByTitle("Test Subject");
     }
 
     @Test

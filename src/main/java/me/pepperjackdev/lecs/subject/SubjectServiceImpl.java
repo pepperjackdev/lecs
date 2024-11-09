@@ -16,7 +16,7 @@ public class SubjectServiceImpl
 
     @Override
     public Subject createSubject(Subject subject) {
-        if (subjectRepository.getSubjectBySubjectTitle(subject.getTitle()).isPresent()) {
+        if (subjectRepository.findByTitle(subject.getTitle()).isPresent()) {
             throw new SubjectTitleAlreadyTakenException();
         }
 
