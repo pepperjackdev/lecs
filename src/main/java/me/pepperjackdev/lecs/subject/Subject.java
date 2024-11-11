@@ -20,7 +20,7 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Getter
     @ToString.Include
-    private long id;
+    private Long id;
 
     @Column(nullable = false, unique = true)
     @Getter

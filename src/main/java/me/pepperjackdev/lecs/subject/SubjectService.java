@@ -1,8 +1,5 @@
 package me.pepperjackdev.lecs.subject;
 
-import org.springframework.stereotype.Service;
-
-@Service
 public interface SubjectService {
     public Subject createSubject(Subject subject);
     public Iterable<Subject> getAllSubjects();
