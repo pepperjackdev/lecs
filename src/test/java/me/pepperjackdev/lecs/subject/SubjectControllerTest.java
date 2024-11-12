@@ -1,6 +1,7 @@
 package me.pepperjackdev.lecs.subject;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -76,7 +77,7 @@ public class SubjectControllerTest {
         Subject subject = new Subject(1L, "Test Subject");
 
         // when...then
-        when(subjectService.updateSubject(1L, subject)).thenReturn(subject);
+        when(subjectService.updateSubject(anyLong(), any(Subject.class))).thenReturn(subject);
         mockMvc.perform(put("/api/subjects/{id}", 1L)
             .contentType(MediaType.APPLICATION_JSON)
             .content("{\"id\": 1, \"title\": \"Test Subject\"}"))
